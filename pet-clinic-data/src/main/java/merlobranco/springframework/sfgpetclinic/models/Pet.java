@@ -2,8 +2,10 @@ package merlobranco.springframework.sfgpetclinic.models;
 
 import java.time.LocalDate;
 
-public class Pet {
+public class Pet extends BaseEntity {
 	
+	private static final long serialVersionUID = 8312507382232209043L;
+
 	private PetType petType;
 	
 	private Owner owner;

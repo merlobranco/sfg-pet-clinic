@@ -1,7 +1,9 @@
 package merlobranco.springframework.sfgpetclinic.models;
 
-public class Person {
+public class Person extends BaseEntity {
 	
+	private static final long serialVersionUID = 4748273250606551747L;
+
 	private String fisrtName;
 	
 	private String lastName;
