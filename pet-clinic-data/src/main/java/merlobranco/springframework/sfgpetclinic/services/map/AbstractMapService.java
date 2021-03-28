@@ -1,15 +1,17 @@
 package merlobranco.springframework.sfgpetclinic.services.map;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import merlobranco.springframework.sfgpetclinic.models.BaseEntity;
 import merlobranco.springframework.sfgpetclinic.services.CrudService;
 
-public abstract class AbstractMapService<T, ID> implements CrudService<T, ID> {
+public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> implements CrudService<T, ID> {
 	
-	protected Map<ID, T> map = new HashMap<>();
+	protected Map<Long, T> map = new HashMap<>();
 
 	@Override
 	public Set<T> findAll() {
@@ -31,8 +33,20 @@ public abstract class AbstractMapService<T, ID> implements CrudService<T, ID> {
 		map.remove(id);
 	}
 	
-	public T save(ID id, T object) {
-		map.put(id, object);
-		return object;
+	@Override
+	public T save(T object) {
+		
+		if (object != null) {
+			if (object.getId() == null) {
+				object.setId(getNextId());
+			}
+			map.put(object.getId(), object);
+			return object;
+		}
+		throw new RuntimeException("Object cannot be null");
+	}
+	
+	private Long getNextId() {
+		return map.isEmpty() ? 1 : Collections.max(map.keySet()) + 1;
 	}
 }
