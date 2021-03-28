@@ -3,7 +3,7 @@ package merlobranco.springframework.sfgpetclinic.services.map;
 import merlobranco.springframework.sfgpetclinic.models.Owner;
 import merlobranco.springframework.sfgpetclinic.services.OwnerService;
 
-public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService{
+public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
 	@Override
 	public Owner save(Owner owner) {
