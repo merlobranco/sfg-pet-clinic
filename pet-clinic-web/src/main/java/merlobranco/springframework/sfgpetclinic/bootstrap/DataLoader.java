@@ -7,19 +7,16 @@ import merlobranco.springframework.sfgpetclinic.models.Owner;
 import merlobranco.springframework.sfgpetclinic.models.Vet;
 import merlobranco.springframework.sfgpetclinic.services.OwnerService;
 import merlobranco.springframework.sfgpetclinic.services.VetService;
-import merlobranco.springframework.sfgpetclinic.services.map.OwnerMapService;
-import merlobranco.springframework.sfgpetclinic.services.map.VetMapService;
 
 @Component
 public class DataLoader implements CommandLineRunner {
-	
-	
+
 	private final OwnerService ownerService;
 	private final VetService vetService;
 	
-	public DataLoader() {
-		ownerService = new OwnerMapService();
-		vetService = new VetMapService();
+	public DataLoader(OwnerService ownerService, VetService vetService) {
+		this.ownerService = ownerService;
+		this.vetService = vetService;
 	}
 
 	@Override
