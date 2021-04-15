@@ -8,7 +8,7 @@ import merlobranco.springframework.sfgpetclinic.services.SpecialtyService;
 import merlobranco.springframework.sfgpetclinic.services.VetService;
 
 @Service
-public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
+public class VetMapService extends MapService<Vet, Long> implements VetService {
 	
 	private final SpecialtyService specialtyService;
 

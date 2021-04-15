@@ -9,7 +9,7 @@ import merlobranco.springframework.sfgpetclinic.services.PetService;
 import merlobranco.springframework.sfgpetclinic.services.PetTypeService;
 
 @Service
-public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
+public class OwnerMapService extends MapService<Owner, Long> implements OwnerService {
 
 	private final PetTypeService petTypeService;
 	private final PetService petService;

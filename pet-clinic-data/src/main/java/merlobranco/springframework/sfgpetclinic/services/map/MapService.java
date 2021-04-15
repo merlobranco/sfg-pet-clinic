@@ -9,7 +9,7 @@ import java.util.Set;
 import merlobranco.springframework.sfgpetclinic.models.BaseEntity;
 import merlobranco.springframework.sfgpetclinic.services.CrudService;
 
-public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> implements CrudService<T, ID> {
+public class MapService<T extends BaseEntity, ID extends Long> implements CrudService<T, ID> {
 	
 	protected Map<Long, T> map = new HashMap<>();
 

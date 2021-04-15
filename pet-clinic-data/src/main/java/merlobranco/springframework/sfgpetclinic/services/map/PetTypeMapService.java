@@ -6,5 +6,5 @@ import merlobranco.springframework.sfgpetclinic.models.PetType;
 import merlobranco.springframework.sfgpetclinic.services.PetTypeService;
 
 @Service
-public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
+public class PetTypeMapService extends MapService<PetType, Long> implements PetTypeService {
 }
