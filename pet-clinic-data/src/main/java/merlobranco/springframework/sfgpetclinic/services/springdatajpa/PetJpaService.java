@@ -9,7 +9,7 @@ import merlobranco.springframework.sfgpetclinic.services.PetService;
 
 @Service
 @Profile("springdatajpa")
-public class PetJpaService  extends JpaService<Pet, Long> implements PetService {
+public class PetJpaService extends JpaService<Pet, Long> implements PetService {
 
 	public PetJpaService(CrudRepository<Pet, Long> repository) {
 		super(repository);
