@@ -1,5 +1,6 @@
 package merlobranco.springframework.sfgpetclinic.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import merlobranco.springframework.sfgpetclinic.models.Owner;
@@ -9,6 +10,7 @@ import merlobranco.springframework.sfgpetclinic.services.PetService;
 import merlobranco.springframework.sfgpetclinic.services.PetTypeService;
 
 @Service
+@Profile({"default", "map"})
 public class OwnerMapService extends MapService<Owner, Long> implements OwnerService {
 
 	private final PetTypeService petTypeService;
