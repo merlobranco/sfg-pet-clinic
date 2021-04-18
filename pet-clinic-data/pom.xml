@@ -11,6 +11,7 @@
 	<!-- For a avoiding the repackage failed error -->
 	<properties>
 		<spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
@@ -37,6 +38,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 	</dependencies>
 	<!-- We do not want this plugin to be repackaged -->
