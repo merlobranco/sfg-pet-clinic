@@ -23,7 +23,7 @@ public class OwnerMapService extends MapService<Owner, Long> implements OwnerSer
 
 	@Override
 	public Owner findByLastName(String lastName) {
-		return map.values().stream().filter(e -> e.getLastName().equals(lastName)).findFirst().orElse(null);
+		return map.values().stream().filter(e -> e.getLastName().equalsIgnoreCase(lastName)).findFirst().orElse(null);
 	}
 
 	/**
